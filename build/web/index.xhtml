@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Tarea 8 Práctica 2 Unidad 2</title>
+    </h:head>
+    <h:body>
+        <h2>Tarea 8 Práctica 2 Unidad 2</h2>
+        <hr/>
+        <h:form>
+            <h:panelGrid  columns="1">
+                <h:outputLabel>login
+                    <h:inputText required="true" id="user" validatorMessage="Debe ser un correo valido" label="E-mail">
+                    <f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>
+                    </h:inputText>
+                    <h:message for="user" style="color: red"/>
+                </h:outputLabel>
+                <h:outputLabel>password
+                    <h:inputSecret required="true" id="pass" label="Password" validatorMessage="Minimo 8 caracteres">
+                    <f:validateLength minimum="8"/>
+                    </h:inputSecret>
+                    <h:message for="pass" style="color: red"/>
+                </h:outputLabel>
+                
+            </h:panelGrid>
+            <h:panelGroup>
+                <h:commandButton value="Entrar"/>
+                <h:commandButton value="Cancelar"/>
+            </h:panelGroup>
+        </h:form>
+    </h:body>
+</html>
+
